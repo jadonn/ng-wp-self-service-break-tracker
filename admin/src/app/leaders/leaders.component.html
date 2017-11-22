@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Add New Leader</h3>
+      <form>
+        <div class="form-group">
+          <label for="addLeaderName">Leader's Name:</label>
+          <input type="text" [(ngModel)]="addLeaderName" class="form-control" id="addLeaderName" aria-describedby="addLeaderNameHelp" placeholder="Enter a name" name="addLeaderName">
+          <small id="addLeaderNameHelp" class="form-text text-muted">The name of the leader you would like to add.</small>
+          <button class="btn btn-primary" (click)="addLeader(addLeaderName)">Add Leader</button>
+        </div>
+      </form>
+      <b>{{ addLeaderMessage }}</b>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Delete an Existing Leader</h3>
+      <form>
+        <div class="form-group">
+          <label for="deleteLeaderName">Leader's Name:</label>
+          <input type="text" [(ngModel)]="deleteLeaderName" class="form-control" id="deleteLeaderName" aria-describedby="deleteLeaderNameHelp" placeholder="Enter a name" name="deleteLeaderName">
+          <small id="deleteLeaderNameHelp" class="form-text text-muted">The name of the leader you would like to delete.</small>
+          <button class="btn btn-primary" (click)="deleteLeader(deleteLeaderName)">Delete Leader</button>
+        </div>
+      </form>
+      <b>{{ deleteLeaderMessage }}</b>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Current Leaders:</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let leader of leaders">
+          {{ leader}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

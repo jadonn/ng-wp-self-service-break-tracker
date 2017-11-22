@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Add New User</h3>
+      <form>
+        <div class="form-group">
+          <label for="addUserName">User's Name:</label>
+          <input type="text" [(ngModel)]="addUserName" class="form-control" id="addUserName" aria-describedby="addUserNameHelp" placeholder="Enter a name" name="addUserName">
+          <small id="addUserNameHelp" class="form-text text-muted">The name of the user you would like to add.</small>
+          <button class="btn btn-primary" (click)="addUser(addUserName)">Add User</button>
+        </div>
+      </form>
+      <b>{{ addUserMessage }}</b>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Delete an Existing User</h3>
+      <form>
+        <div class="form-group">
+          <label for="deleteUserName">User's Name:</label>
+          <input type="text" [(ngModel)]="deleteUserName" class="form-control" id="deleteUserName" aria-describedby="deleteUserNameHelp" placeholder="Enter a name" name="deleteUserName">
+          <small id="deleteUserNameHelp" class="form-text text-muted">The name of the user you would like to delete.</small>
+          <button class="btn btn-primary" (click)="deleteUser(deleteUserName)">Delete User</button>
+        </div>
+      </form>
+      <b>{{ deleteUserMessage }}</b>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Current Users:</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let user of users">
+          {{ user }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

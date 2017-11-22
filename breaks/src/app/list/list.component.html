@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Active Breaks</h4>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let break of breaks">
+          {{break.username}} | {{break.status}} | submitted {{break.createdAt | date:'shortTime'}} | last updated {{break.updatedAt | date: 'shortTime'}}
+        </li>
+      </ul>
+    </div>
+    </div>
+</div>

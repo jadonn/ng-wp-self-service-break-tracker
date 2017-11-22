@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">Request a break! Enter your Jabber username below</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">{{requestNotification}}</div>
+  </div>
+  <div class="row">
+    <form>
+      <div class="form-group">
+        <div class="col-md-12">
+          <input class="form-control" placeholder="User Name" type="text" id="username" required [(ngModel)]="model.username" name="username"/>
+          <button class="btn btn-primary" (click)="onSubmit(model)">Request Break</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      Enter the hash code you received to report that you are going on break or have returned from break.
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      {{closeNotification}}
+    </div>
+  </div>
+  <div class="row">
+    <form>
+        <div class="form-group">
+          <div class="col-md-12">
+            <input class="form-control" placeholder="Hash" type="test" id="hash" required [(ngModel)]="model.hash" name="hash">
+            <button class="btn btn-primary" (click)="onClose(model)">{{buttonText}}</button>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>

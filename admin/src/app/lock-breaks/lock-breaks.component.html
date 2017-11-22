@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>{{ breakLockStatusMessage }}</h3>
+      <button class="btn btn-primary" [class.disabled]="breakLockStatus" (click)="lockBreaks()">Lock Breaks</button>
+      <button class="btn btn-primary" [class.disabled]="breakLockStatus === false" (click)="unlockBreaks()">Unlock Breaks</button>
+    </div>
+  </div>
+</div>
